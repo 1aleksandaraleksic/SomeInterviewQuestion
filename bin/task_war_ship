@@ -1,0 +1,26 @@
+Potrebno napraviti nekoliko klasa koje æe nam služiti kao osnova za izradu igrice WarShip. 
+Igrica treba da predstavlja simulator sukoba ratnih brodova u svemiru.
+
+Osnovna klasa u èitavoj igrici æe biti Ship. Ona u sebi treba da èuva podatke healt i speed. 
+Health je podatak koliko energije ima taj brod u eventualnom sukobu sa nekim drugim ratnim brodom. 
+Enegrija se smanjuje u zavisnoti od jaèine napada od strane neprijatelja. Speed je brzina tog broda. 
+Svaki ship u sebi ima metodu getDamage(int damage). 
+Metoda treba da primi jaèinu udarca i da smanjuje healt dok ona ne bude 0. 
+Èim padne ispod 0 treba da se ispiše poruka da je brod uništen.
+
+Sledeæa klasa je BattleShip. Ona nasleðuje klasu Ship i u sebi sadrži i podatak o jaèini udarca damage. 
+Takoðe treba da ima i metodu attack(Ship ship) koja prosleðenom brodu treba da nanese štetu u zavisnosti 
+koliki mu je damage.
+
+Kreirati i klase SmallShip (damage=50, health=300), BigShip (demage = 100, health = 500) i 
+CommandShip (damage=150, health = 1000). One bi trebale da nasleðuju BattleShip klasu. 
+CommandShip za razliku od ostalih borbenih brodova ima i podatak o shield. 
+To je podatak o jaèini štita koji se kod svakog udarca na CommandShip dodaje na health. 
+Health se smanjuje ali štit je uvek isti i uvek se dodaje na energiju. Kod CommandShip on iznosi 20.
+
+U igrici postoji još jedan tip broda, a to je Cargo. On nasleðuje osobine od Ship klase. 
+Od dodatnih podataka on ima capacity, podatak o tome koliko može da ponese tereta. 
+Razlikujemo dva tipa Cargo brodova, SmallCargo (health = 100, capacity = 1000) i 
+BigCargo (health = 200, capacity = 5000, shield=10).
+
+U MainClass klasi kreirati nekoliko borbenih brodova i simulirati nekoliko napada.
