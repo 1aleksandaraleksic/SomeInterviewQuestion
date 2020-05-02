@@ -1,6 +1,6 @@
-package task.drinks;
+package task.task_drinks;
 
-import task.drinks.Alcoholic.AlcoholType;
+import task.task_drinks.Alcoholic.AlcoholType;
 
 public class MainClassD {
 

@@ -1,4 +1,4 @@
-package task.drinks;
+package task.task_drinks;
 
 public class Alcoholic extends Drink {
 	
