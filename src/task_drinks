@@ -1,0 +1,35 @@
+Napraviti klasu Drink koja od property-a ima samo name i jednu funkciju koja vraca 
+opis tog objekta description(). Zatim, napraviti dve subclass-e, koje nasledjuju klasu
+Drink, klase Alcoholic i Nonalcoholic.
+
+Alcoholic od dodatinih property-a ima vol (decimalan broj) ili ti procenat alkohola, 
+kao i AlcoholType (enum) koji moze biti Beer, Vine, Strong Drink i Cocktail
+Takodje u klasi Alcoholic treba override-ovati funkciju description() da osim imena
+ ispisuje koji je tip alkohola i koliko ima procenata.
+
+Nonalcoholic od dodatnih property-a ima soda (bool) koji govori da li je pice 
+gazirano ili negazirano, i ima jednu opcionu promenljivu flavour?.
+Takodje u klasi Nonalcoholic treba da se override-uje funkcija description(), koja 
+pored naziva treba da napise da li je gazirano ili negazirano pice i kog je ukusa 
+u koliko ima ukus, ako nema ukus, treba samo da pise da li je gazirano ili ne.
+
+Nakon toga potrebno je napraviti klasu Cocktail koja nasledjuje klasu Alcoholic.
+Klasa Cocktails ima i dodatne promenljive:
+ base - Alcoholic 
+ ingredient1 - Alcoholic
+ ingredient2 - Nonalcoholic
+ ingredient3 - Alcoholic? 
+ ingredient3 - Alcoholic? je opciona promenljiva. 
+ 
+ Takodje i u klasi Cocktails treba da se override-uje funkcije description() 
+ tako da vraca ime koktela, sastojke i procenat alkohola u koktelu. 
+ Pri inicijalizaciji koktela (init funkcija) treba da se proslede samo Ime i sastojci,
+ a AlcoholType setovati unutar same deklaracije klase. vol - procenat alkohola treba 
+ da se izracuna na osnovu sastojaka koktela.
+
+## Bonus napisati convenience init funkciju za Alcoholic  da se pri inicijalizaciji 
+prosledjuje samo name i vol,  a AlcoholType se setuje na osnovu vrednosti vol
+do 10% alkohola Beer, od 10% - 20% Vine, i preko 20% Strong Drink.
+
+
+
